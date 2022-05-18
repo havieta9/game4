@@ -447,7 +447,7 @@ function App() {
   async function addForSale(id, price) {
     setIsAddForSaleLoading(true)
     if (price === 0 || price === '0') {
-      toast.error('🦄 Price is 0')
+      toast.error('Price is 0')
       return
     }
     let overrides = {
@@ -720,7 +720,7 @@ function App() {
             style={{ float: 'right' }}
             onClick={() => addForSale(mon?.id, value)}
           >
-            Add for sale
+            Sell
           </button>
         )}
       </div>
@@ -747,7 +747,7 @@ function App() {
             style={{ float: 'right' }}
             onClick={() => removeFromSale(mon?.id)}
           >
-            Remove from sale
+            Cancel Sell
             {isRemoveFromSaleLoading && <Spinner color="#000" />}
           </button>
         )}
@@ -795,7 +795,7 @@ function App() {
             setBreedChoice1(mon?.id)
           }}
         >
-          Choice 1
+          Pokemon 1
         </button>
         <button
           className="br-Choice-btn rpgui-button"
@@ -805,7 +805,7 @@ function App() {
             setBreedChoice2(mon?.id)
           }}
         >
-          Choice 2
+          Pokemon 2
         </button>
       </div>
     )
@@ -928,7 +928,7 @@ function App() {
               setFightChoice1(mon.id)
             }}
           >
-            Choice 1
+            Pokemon 1
           </button>
         </div>
       </div>
@@ -955,7 +955,7 @@ function App() {
                 setFightChoice2(mon.id)
               }}
             >
-              Choice 2
+              Pokemon 2
             </button>
           </div>
         </div>
@@ -1035,13 +1035,13 @@ function App() {
       <div className="AppTitle">
         <div className="row" style={{ maxWidth: '100%' }}>
           <div className="column title-column col-lg-3 col-sm-12">
-            <img src={MonImages['favicon16x16']} alt="lokian-logo" /> <span>L O K I A N </span>
+            <img src={MonImages['favicon16x16']} alt="lokian-logo" /> <span>POKEMON </span>
           </div>
 
           <div className="column user-info-column col-lg-3 col-sm-12">
-            {/* ERC20, LOKs */}
+            {/* ERC20, Tokens */}
             <span className="rpgui-container framed-grey">
-              {`${Math.round(Number(tokenBalance) * 1e4) / 1e4 || '0'} LOKs `}{' '}
+              {`${Math.round(Number(tokenBalance) * 1e4) / 1e4 || '0'} POM `}{' '}
             </span>
           </div>
 
@@ -1172,7 +1172,7 @@ function App() {
                 {!fightTxDone && rewards === 0 && !winner ? (
                   ''
                 ) : (
-                  <label className="winner-label">{rewards === 0 ? '' : `You have won ${rewards} LOKs!`}</label>
+                  <label className="winner-label">{rewards === 0 ? '' : `You have won ${rewards} POM!`}</label>
                 )}
               </>
             ) : (
@@ -1247,7 +1247,7 @@ function App() {
         <Tab eventKey="token" title="Token">
           <div className="p1">Your money</div>
           <div className="p1" style={{ padding: '12px' }}>
-            {tokenBalance} Lokians
+            {tokenBalance} POM
           </div>
           <br />
           <br />
@@ -1285,11 +1285,11 @@ function App() {
           </div>
 
           <div className="rpgui-container framed-grey">
-            <div className="p1">Buy somethin (NFT)</div>
+            <div className="p1">Buy item</div>
             <div className="p1">note: if transaction fails, set gas fees above 100k</div>
             <div className="sharing-area">
               <span>
-                <div className="rpgui-icon sword"></div> A Sword (500 Loks)
+                <div className="rpgui-icon sword"></div> A Sword (500 POM)
               </span>
               <div className="form-line with-buy-item">
                 <label className="form-label">Amount</label>
@@ -1315,7 +1315,7 @@ function App() {
 
             <div className="sharing-area">
               <span>
-                <div className="rpgui-icon shield"></div> A Shield (500 Loks)
+                <div className="rpgui-icon shield"></div> A Shield (500 POM)
               </span>
               <div className="form-line with-buy-item">
                 <label className="form-label">Amount</label>
@@ -1341,7 +1341,7 @@ function App() {
 
             <div className="sharing-area">
               <span>
-                <div className="rpgui-icon potion-red"></div>A Healing Potion (50 Loks)
+                <div className="rpgui-icon potion-red"></div>A Healing Potion (50 POM)
               </span>
               <div className="form-line with-buy-item">
                 <label className="form-label">Amount</label>
@@ -1367,7 +1367,7 @@ function App() {
 
             <div className="sharing-area">
               <span>
-                <div className="rpgui-icon potion-blue"></div> A Mana Potion (50 Loks)
+                <div className="rpgui-icon potion-blue"></div> A Mana Potion (50 POM)
               </span>
               <div className="form-line with-buy-item">
                 <label className="form-label">Amount</label>
@@ -1393,7 +1393,7 @@ function App() {
 
             <div className="sharing-area">
               <span>
-                <div className="rpgui-icon potion-green"></div> A Magic Potion (50 Loks)
+                <div className="rpgui-icon potion-green"></div> A Magic Potion (50 POM)
               </span>
               <div className="form-line with-buy-item">
                 <label className="form-label">Amount</label>
@@ -1419,7 +1419,7 @@ function App() {
           </div>
 
           <div className="rpgui-container framed-grey">
-            <div className="p1">Give to the skeleton people (burn token)</div>
+            <div className="p1">Burn Tokens</div>
             <div className="p1">note: if transaction fails, set gas fees above 100k</div>
             <div className="skellies">
               <img className="monImg" src={MonImages['skelly']} alt="skeleton-people-1" />
