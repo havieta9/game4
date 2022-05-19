@@ -52,7 +52,7 @@ const connectorsByName: { [connectorName in ConnectorNames]: any } = {
   [ConnectorNames.Injected]: injected,
 }
 
-const CONTRACT_ADDRESS = '0x2a589372Aafa2CcDbD20b0512c05508409161e21'
+const CONTRACT_ADDRESS = '0xB32b612fef14bc7BCeA1048EfAc229f10D6c760a'
 const ERC20_CONTRACT_ADDRESS = '0x2134a09dc16124CC22Ca5269b8887570ef5D2334'
 const ERC1155_CONTRACT_ADDRESS = '0x71731bF88d4d7B590DEaEfb9374412071B10604b'
 
